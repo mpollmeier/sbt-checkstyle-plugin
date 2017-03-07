@@ -55,12 +55,12 @@ checkstyleConfigLocation := CheckstyleConfigLocation.Classpath("com/etsy/checkst
 
 To run Checkstyle automatically after compilation:
 ```scala
-(checkstyle in Compile) := (checkstyle in Compile) triggeredBy (compile in Compile)
+checkstyle in Compile := (checkstyle in Compile) triggeredBy (compile in Compile)
 ```
 
 To run Checkstyle automatically after test compilation:
 ```scala
-(checkstyle in Test) := (checkstyle in Test) triggeredBy (compile in Test)
+checkstyle in Test := (checkstyle in Test) triggeredBy (compile in Test)
 ```
 
 ### XSLT transformations
